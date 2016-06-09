@@ -16,7 +16,7 @@ $(document).ready(function() {
       var convertCheck = parseFloat(curCheckBalance);
       var inputC = parseFloat($('#amountChecking').val());
       var finalCheckWith = convertCheck - inputC;
-      if (inputC > finalCheckWith) {
+      if (inputC > convertCheck) {
         return;
       }
         else {$('#checkingBalance').text('$' + finalCheckWith)};
@@ -42,7 +42,7 @@ $(document).ready(function() {
       var convertSav = parseFloat(curSavBalance);
       var inputS = parseFloat($('#amountSavings').val());
       var finalSavWith = convertSav - inputS;
-      if (finalSavWith < inputS) {
+      if (convertSav < inputS) {
         return;
       }
         else {$('#savingsBalance').text('$' + finalSavWith)};
